@@ -39,10 +39,12 @@ input, textarea {
     border-left: none;
     border-right: none;
     height: 40px;
+    transition: all 300ms ease;
 }
 
 textarea {
     resize: vertical;
+    width: 100%;
     height: 100px;
     padding: 15px;
 }
@@ -51,6 +53,14 @@ label {
     font-size: 14px;
     font-weight: bold;
     margin-bottom: 6px;
+}
+
+input:hover, textarea:hover {
+    border-color:#dcdfe3;
+}
+
+input:focus, textarea:focus {
+    border-color: maroon;
 }
 
 .container {
@@ -66,6 +76,7 @@ label {
 }
 
 .click {
+    cursor: pointer;
     transition: all 300ms ease;
 }
 
@@ -260,13 +271,14 @@ nav {
 .modal__half {
     width: 50%;
       padding: 40px 72px;
+       display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
 }
 
 .modal__about {
     background-color: rgb(245, 245, 245);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .modal__languages {
@@ -281,7 +293,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-     transition: all 300ms ease;
+     transition: all 600ms ease;
 }
 
 .language__name {
@@ -297,7 +309,7 @@ nav {
 
 .modal__language:hover .language__name {
     transform: scale(1);
-    transition: all 300ms ease;
+    transition: all 400ms ease;
 }
 
 .modal__language--img {
@@ -315,6 +327,7 @@ nav {
 
 .modal__sub-title {
     margin: 12px 0 24px 0; 
+    font-size: 20px;
 }
 
 .modal__para {
@@ -325,8 +338,78 @@ nav {
 
 .form__item {
     margin-bottom: 20px;
+    display: flex;
+    flex-direction:column;
 }
 
+.form__submit {
+    background-color: maroon;
+    color: white;
+    border: 2px solid maroon;
+    font-weight: bold;
+    width: 100%;
+    max-width: 240px;
+    padding: 12px 24px;
+    font-size: 20px;
+    transition: all 300ms ease;
+}
+
+.form__submit:hover {
+    border-color: #fff;
+    background-color: transparent;
+}
+
+.form__submit:active {
+    border-color: maroon;
+    color: maroon;
+}
+
+.modal__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal__overlay--loading {
+    background-color: #242424;
+    font-size: 80px;
+    z-index: -1;
+}
+
+.modal__overlay--success {
+    background-color: #4bb543;
+    font-size:40px;
+    font-weight: 700;
+    text-align: center;
+    padding: 28px;
+}
+
+.fa-spinner {
+    animation: spinner 750ms linear infinite;
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.modal__exit {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 36px;
+    color: #fff;
+    z-index: 100;
+}
 
 /*PROJECTS*/
 
