@@ -26,7 +26,7 @@
                 <img id="personal-logo" src="./assets/logo.svg" alt="">
             </figure>
             <ul class="nav__link--list">
-                <li class="nav__links">
+                <li class="nav__links" onclick="toggleModal()">
                     <a href="#" class="
                     nav__link--anchor
                     link__hover-effect
@@ -34,7 +34,7 @@
                     ">About</a>
                 </li>
                   <li class="nav__links">
-                    <a href="#" class="
+                    <a href="#projects" class="
                     nav__link--anchor
                     link__hover-effect
                     link__hover-effect--black
@@ -77,9 +77,11 @@
                 </div>
            </div>
          </header>
+         <a href="#">
         <button class="mail__btn click" onclick="toggleModal()">
         <i class="fa-solid fa-envelope"></i>
         </button>
+        </a>
         <a href="#projects" class="scroll">
             <div class="scroll__icon click"></div>
         </a>
@@ -210,14 +212,14 @@
                  link__hover-effect--white">
                    LinkedIn
                 </a>
-                 <a href="#" 
+                 <a href="#" onclick="toggleModal()" 
                  class="
                  footer__social--link
                  link__hover-effect
                  link__hover-effect--white">
-                    Email
+                    Contact
                 </a>
-                 <a href="#" 
+                 <a href="#" target="_blank"
                  class="
                  footer__social--link
                  link__hover-effect
